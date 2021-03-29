@@ -31,5 +31,20 @@ jobs:
       # Runs a single command using the runners shell
       - name: Log a Secret
         run: echo ${{ secrets.PASSWORD }} | rev
+  build2:
+    # The type of runner that the job will run on
+      runs-on: ubuntu-latest
+      environment: sillyname
+
+      # Steps represent a sequence of tasks that will be executed as part of the job
+      steps:
+        # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+        - uses: actions/checkout@v2
+
+        - uses: hmarr/debug-action@v2
+
+        # Runs a single command using the runners shell
+        - name: Log a Secret
+          run: echo ${{ secrets.PASSWORD }} | rev
 
 
