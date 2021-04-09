@@ -27,6 +27,7 @@ jobs:
       - uses: actions/checkout@v2
       
       - uses: hmarr/debug-action@v2
+        if: false
 
       # Runs a single command using the runners shell
       - name: Log a Secret
